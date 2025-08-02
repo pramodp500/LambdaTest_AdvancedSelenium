@@ -1,0 +1,19 @@
+<suite name="ParallelLambdaSuite" parallel="tests" thread-count="2">
+    <test name="Chrome on Windows">
+        <parameter name="browser" value="Chrome" />
+        <parameter name="platform" value="Windows 10" />
+        <parameter name="browserVersion" value="latest" />
+        <classes>
+            <class name="Capabilities.TestSceanrio3Parallel" />
+        </classes>
+    </test>
+
+    <test name="Safari on macOS">
+        <parameter name="browser" value="Safari" />
+        <parameter name="platform" value="macOS Catalina" />
+        <parameter name="browserVersion" value="13.1" />
+        <classes>
+            <class name="Capabilities.TestSceanrio3Parallel" />
+        </classes>
+    </test>
+</suite>
