@@ -6,7 +6,7 @@
         <parameter name="platform" value="Windows 10"/>
         <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
         <classes>
-            <class name="Capabilities.TestScenario1"/>
+            <class name="Capabilities.TestScenario2"/>
         </classes>
     </test>
 
@@ -16,7 +16,7 @@
         <parameter name="platform" value="macOS Ventura"/>
         <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
         <classes>
-            <class name="Capabilities.TestScenario1"/>
+            <class name="Capabilities.TestScenario2"/>
         </classes>
     </test>
 
@@ -26,7 +26,7 @@
         <parameter name="platform" value="Windows 11"/>
         <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
         <classes>
-            <class name="Capabilities.TestScenario1"/>
+            <class name="Capabilities.TestScenario2"/>
         </classes>
     </test>
 
