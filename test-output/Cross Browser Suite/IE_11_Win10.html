@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>TestNG:  IE_11_Win10</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>IE_11_Win10</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Aug 03 10:05:07 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6600 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Capabilities.TestScenario1.setup()'><b>setup</b><br>Test class: Capabilities.TestScenario1<br>Parameters: internet explorer, 11.0, Windows 10, https://www.lambdatest.com/selenium-playground/</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: ced06c82-7f70-42ed-88ab-72fe27c66856-rgfv2-ap-south-1: Error: Could not find a valid browserVersionData. config received, osVersion: win10 browserName: internet explorer browserVersion: 11.0 Input capabilities : {&quot;DisableXFHeaders&quot;:true,&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserName&quot;:&quot;internet explorer&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;console&quot;:&quot;false&quot;,&quot;enableNetworkThrottling&quot;:false,&quot;extendedDebuging&quot;:true,&quot;headless&quot;:false,&quot;hubVersion&quot;:&quot;9168da5405b81069cfa94db440994834381da243-merger-ml&quot;,&quot;ie.compatibility&quot;:11001,&quot;ie.flash&quot;:false,&quot;ie.popups&quot;:false,&quot;isRealMobile&quot;:false,&quot;jwp&quot;:false,&quot;loggingPrefs&quot;:{&quot;browser&quot;:&quot;ALL&quot;,&quot;driver&quot;:&quot;ALL&quot;,&quot;performance&quot;:&quot;ALL&quot;,&quot;server&quot;:&quot;ALL&quot;},&quot;lt:options&quot;:{&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserVersion&quot;:&quot;11.0&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;platformName&quot;:&quot;Windows 10&quot;,&quot;project&quot;:&quot;Selenium Grid Demo&quot;,&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;username&quot;:&quot;pramqa2025&quot;},&quot;mode&quot;:&quot;cloud&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;network&quot;:false,&quot;performance&quot;:false,&quot;platform&quot;:&quot;win10&quot;,&quot;platformName&quot;:&quot;win10&quot;,&quot;projectName&quot;:&quot;Selenium Grid Demo&quot;,&quot;resolution&quot;:&quot;1920x1080&quot;,&quot;se:ieOptions&quot;:{},&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;tunnel&quot;:false,&quot;tunnelIdentifier&quot;:&quot;&quot;,&quot;userAgent&quot;:&quot;selenium/4.34.0 (java windows)&quot;,&quot;username&quot;:&quot;pramqa2025&quot;,&quot;verboseWebDriverLogging&quot;:false,&quot;version&quot;:&quot;11.0&quot;,&quot;video&quot;:true,&quot;visual&quot;:false,&quot;w3c&quot;:true} 
+Host info: host: &apos;DESKTOP-43CS9BE&apos;, ip: &apos;192.168.1.3&apos;
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}]}]
+Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at Capabilities.TestScenario1.setup(TestScenario1.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2058157936", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2058157936'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: ced06c82-7f70-42ed-88ab-72fe27c66856-rgfv2-ap-south-1: Error: Could not find a valid browserVersionData. config received, osVersion: win10 browserName: internet explorer browserVersion: 11.0 Input capabilities : {&quot;DisableXFHeaders&quot;:true,&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserName&quot;:&quot;internet explorer&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;console&quot;:&quot;false&quot;,&quot;enableNetworkThrottling&quot;:false,&quot;extendedDebuging&quot;:true,&quot;headless&quot;:false,&quot;hubVersion&quot;:&quot;9168da5405b81069cfa94db440994834381da243-merger-ml&quot;,&quot;ie.compatibility&quot;:11001,&quot;ie.flash&quot;:false,&quot;ie.popups&quot;:false,&quot;isRealMobile&quot;:false,&quot;jwp&quot;:false,&quot;loggingPrefs&quot;:{&quot;browser&quot;:&quot;ALL&quot;,&quot;driver&quot;:&quot;ALL&quot;,&quot;performance&quot;:&quot;ALL&quot;,&quot;server&quot;:&quot;ALL&quot;},&quot;lt:options&quot;:{&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserVersion&quot;:&quot;11.0&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;platformName&quot;:&quot;Windows 10&quot;,&quot;project&quot;:&quot;Selenium Grid Demo&quot;,&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;username&quot;:&quot;pramqa2025&quot;},&quot;mode&quot;:&quot;cloud&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;network&quot;:false,&quot;performance&quot;:false,&quot;platform&quot;:&quot;win10&quot;,&quot;platformName&quot;:&quot;win10&quot;,&quot;projectName&quot;:&quot;Selenium Grid Demo&quot;,&quot;resolution&quot;:&quot;1920x1080&quot;,&quot;se:ieOptions&quot;:{},&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;tunnel&quot;:false,&quot;tunnelIdentifier&quot;:&quot;&quot;,&quot;userAgent&quot;:&quot;selenium/4.34.0 (java windows)&quot;,&quot;username&quot;:&quot;pramqa2025&quot;,&quot;verboseWebDriverLogging&quot;:false,&quot;version&quot;:&quot;11.0&quot;,&quot;video&quot;:true,&quot;visual&quot;:false,&quot;w3c&quot;:true} 
+Host info: host: &apos;DESKTOP-43CS9BE&apos;, ip: &apos;192.168.1.3&apos;
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}]}]
+Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at Capabilities.TestScenario1.setup(TestScenario1.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>6</td>
+<td>Capabilities.TestScenario1@663c9e7a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Capabilities.TestScenario1.teardown()'><b>teardown</b><br>Test class: Capabilities.TestScenario1</td>
+<td></td>
+<td>0</td>
+<td>Capabilities.TestScenario1@663c9e7a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Capabilities.TestScenario1.testPageTitleWithExplicitWaitAndSoftAssert()'><b>testPageTitleWithExplicitWaitAndSoftAssert</b><br>Test class: Capabilities.TestScenario1</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: ced06c82-7f70-42ed-88ab-72fe27c66856-rgfv2-ap-south-1: Error: Could not find a valid browserVersionData. config received, osVersion: win10 browserName: internet explorer browserVersion: 11.0 Input capabilities : {&quot;DisableXFHeaders&quot;:true,&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserName&quot;:&quot;internet explorer&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;console&quot;:&quot;false&quot;,&quot;enableNetworkThrottling&quot;:false,&quot;extendedDebuging&quot;:true,&quot;headless&quot;:false,&quot;hubVersion&quot;:&quot;9168da5405b81069cfa94db440994834381da243-merger-ml&quot;,&quot;ie.compatibility&quot;:11001,&quot;ie.flash&quot;:false,&quot;ie.popups&quot;:false,&quot;isRealMobile&quot;:false,&quot;jwp&quot;:false,&quot;loggingPrefs&quot;:{&quot;browser&quot;:&quot;ALL&quot;,&quot;driver&quot;:&quot;ALL&quot;,&quot;performance&quot;:&quot;ALL&quot;,&quot;server&quot;:&quot;ALL&quot;},&quot;lt:options&quot;:{&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserVersion&quot;:&quot;11.0&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;platformName&quot;:&quot;Windows 10&quot;,&quot;project&quot;:&quot;Selenium Grid Demo&quot;,&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;username&quot;:&quot;pramqa2025&quot;},&quot;mode&quot;:&quot;cloud&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;network&quot;:false,&quot;performance&quot;:false,&quot;platform&quot;:&quot;win10&quot;,&quot;platformName&quot;:&quot;win10&quot;,&quot;projectName&quot;:&quot;Selenium Grid Demo&quot;,&quot;resolution&quot;:&quot;1920x1080&quot;,&quot;se:ieOptions&quot;:{},&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;tunnel&quot;:false,&quot;tunnelIdentifier&quot;:&quot;&quot;,&quot;userAgent&quot;:&quot;selenium/4.34.0 (java windows)&quot;,&quot;username&quot;:&quot;pramqa2025&quot;,&quot;verboseWebDriverLogging&quot;:false,&quot;version&quot;:&quot;11.0&quot;,&quot;video&quot;:true,&quot;visual&quot;:false,&quot;w3c&quot;:true} 
+Host info: host: &apos;DESKTOP-43CS9BE&apos;, ip: &apos;192.168.1.3&apos;
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}]}]
+Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at Capabilities.TestScenario1.setup(TestScenario1.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1044570403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1044570403'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: ced06c82-7f70-42ed-88ab-72fe27c66856-rgfv2-ap-south-1: Error: Could not find a valid browserVersionData. config received, osVersion: win10 browserName: internet explorer browserVersion: 11.0 Input capabilities : {&quot;DisableXFHeaders&quot;:true,&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserName&quot;:&quot;internet explorer&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;console&quot;:&quot;false&quot;,&quot;enableNetworkThrottling&quot;:false,&quot;extendedDebuging&quot;:true,&quot;headless&quot;:false,&quot;hubVersion&quot;:&quot;9168da5405b81069cfa94db440994834381da243-merger-ml&quot;,&quot;ie.compatibility&quot;:11001,&quot;ie.flash&quot;:false,&quot;ie.popups&quot;:false,&quot;isRealMobile&quot;:false,&quot;jwp&quot;:false,&quot;loggingPrefs&quot;:{&quot;browser&quot;:&quot;ALL&quot;,&quot;driver&quot;:&quot;ALL&quot;,&quot;performance&quot;:&quot;ALL&quot;,&quot;server&quot;:&quot;ALL&quot;},&quot;lt:options&quot;:{&quot;accessKey&quot;:&quot;**************************************************&quot;,&quot;browserVersion&quot;:&quot;11.0&quot;,&quot;build&quot;:&quot;Build 001&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;platformName&quot;:&quot;Windows 10&quot;,&quot;project&quot;:&quot;Selenium Grid Demo&quot;,&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;username&quot;:&quot;pramqa2025&quot;},&quot;mode&quot;:&quot;cloud&quot;,&quot;name&quot;:&quot;Test Scenario 1&quot;,&quot;network&quot;:false,&quot;performance&quot;:false,&quot;platform&quot;:&quot;win10&quot;,&quot;platformName&quot;:&quot;win10&quot;,&quot;projectName&quot;:&quot;Selenium Grid Demo&quot;,&quot;resolution&quot;:&quot;1920x1080&quot;,&quot;se:ieOptions&quot;:{},&quot;selenium_version&quot;:&quot;4.21.0&quot;,&quot;tunnel&quot;:false,&quot;tunnelIdentifier&quot;:&quot;&quot;,&quot;userAgent&quot;:&quot;selenium/4.34.0 (java windows)&quot;,&quot;username&quot;:&quot;pramqa2025&quot;,&quot;verboseWebDriverLogging&quot;:false,&quot;version&quot;:&quot;11.0&quot;,&quot;video&quot;:true,&quot;visual&quot;:false,&quot;w3c&quot;:true} 
+Host info: host: &apos;DESKTOP-43CS9BE&apos;, ip: &apos;192.168.1.3&apos;
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}]}]
+Capabilities {LT:Options: Capabilities {accessKey: LT..., browserName: internet explorer, se:ieOptions: {}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at Capabilities.TestScenario1.setup(TestScenario1.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Capabilities.TestScenario1@663c9e7a</td></tr>
+</table><p>
+</body>
+</html>

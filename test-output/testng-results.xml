@@ -1,59 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-02T19:35:36 IST" name="ParallelSliderTest" finished-at="2025-08-02T19:35:56 IST" duration-ms="20534">
+  <suite started-at="2025-08-03T10:07:52 IST" name="Cross Browser Suite" finished-at="2025-08-03T10:08:13 IST" duration-ms="21428">
     <groups>
     </groups>
-    <test started-at="2025-08-02T19:35:36 IST" name="SliderTest on Chrome - Windows 10" finished-at="2025-08-02T19:35:50 IST" duration-ms="13905">
-      <class name="Capabilities.testScenario2_Draganddrop">
-        <test-method signature="testDragAndDropSlider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.testScenario2_Draganddrop@61001b64]" started-at="2025-08-02T19:35:36 IST" name="testDragAndDropSlider" finished-at="2025-08-02T19:35:50 IST" duration-ms="13779" status="PASS">
+    <test started-at="2025-08-03T10:07:52 IST" name="Chrome_128_Win10" finished-at="2025-08-03T10:08:02 IST" duration-ms="10347">
+      <class name="Capabilities.TestScenario1">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@4659191b]" started-at="2025-08-03T10:07:52 IST" name="setup" finished-at="2025-08-03T10:08:02 IST" duration-ms="9886" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[128.0]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[Windows 10]]>
               </value>
             </param>
-            <param index="2">
+            <param index="3">
               <value>
-                <![CDATA[latest]]>
+                <![CDATA[https://www.lambdatest.com/selenium-playground/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDragAndDropSlider -->
-      </class> <!-- Capabilities.testScenario2_Draganddrop -->
-    </test> <!-- SliderTest on Chrome - Windows 10 -->
-    <test started-at="2025-08-02T19:35:36 IST" name="SliderTest on Safari - macOS Catalina" finished-at="2025-08-02T19:35:56 IST" duration-ms="20534">
-      <class name="Capabilities.testScenario2_Draganddrop">
-        <test-method signature="testDragAndDropSlider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.testScenario2_Draganddrop@6d4d66d2]" started-at="2025-08-02T19:35:36 IST" name="testDragAndDropSlider" finished-at="2025-08-02T19:35:56 IST" duration-ms="20427" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="testPageTitleWithExplicitWaitAndSoftAssert()[pri:0, instance:Capabilities.TestScenario1@4659191b]" started-at="2025-08-03T10:08:02 IST" name="testPageTitleWithExplicitWaitAndSoftAssert" finished-at="2025-08-03T10:08:02 IST" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitleWithExplicitWaitAndSoftAssert -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario1@4659191b]" started-at="2025-08-03T10:08:02 IST" name="teardown" finished-at="2025-08-03T10:08:02 IST" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Capabilities.TestScenario1 -->
+    </test> <!-- Chrome_128_Win10 -->
+    <test started-at="2025-08-03T10:07:52 IST" name="Edge_127_macOS" finished-at="2025-08-03T10:08:03 IST" duration-ms="11242">
+      <class name="Capabilities.TestScenario1">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@17f62e33]" started-at="2025-08-03T10:07:52 IST" name="setup" finished-at="2025-08-03T10:08:03 IST" duration-ms="10881" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Safari]]>
+                <![CDATA[MicrosoftEdge]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[macOS Catalina]]>
+                <![CDATA[127.0]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[13.1]]>
+                <![CDATA[macOS Ventura]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.lambdatest.com/selenium-playground/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDragAndDropSlider -->
-      </class> <!-- Capabilities.testScenario2_Draganddrop -->
-    </test> <!-- SliderTest on Safari - macOS Catalina -->
-  </suite> <!-- ParallelSliderTest -->
+        </test-method> <!-- setup -->
+        <test-method signature="testPageTitleWithExplicitWaitAndSoftAssert()[pri:0, instance:Capabilities.TestScenario1@17f62e33]" started-at="2025-08-03T10:08:03 IST" name="testPageTitleWithExplicitWaitAndSoftAssert" finished-at="2025-08-03T10:08:03 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitleWithExplicitWaitAndSoftAssert -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario1@17f62e33]" started-at="2025-08-03T10:08:03 IST" name="teardown" finished-at="2025-08-03T10:08:03 IST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Capabilities.TestScenario1 -->
+    </test> <!-- Edge_127_macOS -->
+    <test started-at="2025-08-03T10:07:52 IST" name="Firefox_130_Win11" finished-at="2025-08-03T10:08:13 IST" duration-ms="21428">
+      <class name="Capabilities.TestScenario1">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@27406a17]" started-at="2025-08-03T10:07:52 IST" name="setup" finished-at="2025-08-03T10:08:11 IST" duration-ms="19190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[130.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Windows 11]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.lambdatest.com/selenium-playground/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPageTitleWithExplicitWaitAndSoftAssert()[pri:0, instance:Capabilities.TestScenario1@27406a17]" started-at="2025-08-03T10:08:11 IST" name="testPageTitleWithExplicitWaitAndSoftAssert" finished-at="2025-08-03T10:08:11 IST" duration-ms="322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitleWithExplicitWaitAndSoftAssert -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario1@27406a17]" started-at="2025-08-03T10:08:11 IST" name="teardown" finished-at="2025-08-03T10:08:13 IST" duration-ms="1775" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Capabilities.TestScenario1 -->
+    </test> <!-- Firefox_130_Win11 -->
+  </suite> <!-- Cross Browser Suite -->
 </testng-results>
