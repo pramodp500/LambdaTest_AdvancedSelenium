@@ -1,92 +1,109 @@
 package Capabilities;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.MutableCapabilities;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.ie.InternetExplorerOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
-import org.testng.asserts.SoftAssert;
-
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+
+import static org.testng.Assert.*;
 
 public class TestScenario1 {
-
-    WebDriver driver;
-
-    @Parameters({ "browser", "version", "platform", "url" })
+    private WebDriver driver;
+    private String expectedUrl = "https://www.lambdatest.com/integrations";
+    private String LT_USERNAME = "pramqa2025";
+    private String LT_ACCESS_KEY = "LT_rcCzH9ULzk30W21Z9oVvBnfN0CZp5CSg9ETGb5IyTsDkF7i";
+    
+    @Parameters({"browser", "version", "platform"})
     @BeforeMethod
-    public void setup(String browser, String version, String platform, String url) throws MalformedURLException {
-        MutableCapabilities capabilities;
+    public void setUp(String browser, String version, String platform) throws Exception {
+        MutableCapabilities capabilities = new MutableCapabilities();
+        capabilities.setCapability("browserName", browser);
+        capabilities.setCapability("browserVersion", version);
 
-        switch (browser.toLowerCase()) {
-            case "chrome":
-                capabilities = new ChromeOptions();
-                break;
-            case "firefox":
-                capabilities = new FirefoxOptions();
-                break;
-            case "microsoftedge":
-            case "edge":
-                capabilities = new EdgeOptions();
-                break;
-            case "internet explorer":
-            case "ie":
-                capabilities = new InternetExplorerOptions();
-                break;
-            default:
-                throw new IllegalArgumentException("Unsupported browser: " + browser);
-        }
-
-        // LambdaTest W3C-compliant LT:Options
         MutableCapabilities ltOptions = new MutableCapabilities();
-        ltOptions.setCapability("username", "pramqa2025");
-        ltOptions.setCapability("accessKey", "LT_rcCzH9ULzk30W21Z9oVvBnfN0CZp5CSg9ETGb5IyTsDkF7i");
-        ltOptions.setCapability("project", "Selenium Grid Demo");
-        ltOptions.setCapability("build", "Build 001");
-        ltOptions.setCapability("name", "Test Scenario 1");
         ltOptions.setCapability("platformName", platform);
-        ltOptions.setCapability("browserVersion", version);
+        ltOptions.setCapability("build", "LambdaTest Advanced Scenario");
+        ltOptions.setCapability("name", "IntegrationTabHandlingTest");
         ltOptions.setCapability("selenium_version", "4.21.0");
 
         capabilities.setCapability("LT:Options", ltOptions);
 
-        // LambdaTest Hub URL
-        String gridURL = "https://hub.lambdatest.com/wd/hub";
-        driver = new RemoteWebDriver(new URL(gridURL), capabilities);
-
-        driver.manage().window().maximize();
-        driver.get(url);
+        driver = new RemoteWebDriver(
+                new URL("https://" + LT_USERNAME + ":" + LT_ACCESS_KEY + "@hub.lambdatest.com/wd/hub"),
+                capabilities);
     }
 
     @Test
-    public void testPageTitleWithExplicitWaitAndSoftAssert() {
-        // Wait for the DOM to fully load
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+    public void runScenario() throws InterruptedException {
+        driver.get("https://www.lambdatest.com");
+        
+        Thread.sleep(2000);
 
-        // Soft Assertion for title (expecting failure intentionally)
-        SoftAssert softAssert = new SoftAssert();
-        String actualTitle = driver.getTitle();
-        System.out.println("Actual Title: " + actualTitle);
+        // Scroll to and click "Explore all Integrations"
+        WebElement exploreLink = driver.findElement(By.xpath("//a[normalize-space()='Explore all Integrations']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", exploreLink);
+        Thread.sleep(1000);
 
-        softAssert.assertEquals(actualTitle, "Selenium Grid Online | Run Selenium Test On Cloud");
-        System.out.println("Continuing test after soft assertion...");
+        // Get the href
+        String href = exploreLink.getAttribute("href");
 
-        softAssert.assertAll(); // Triggers failure at the end if assertion failed
+        // Open it in a new tab
+        ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", href);
+
+        // Now switch to the new tab
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+
+        System.out.println("Window Handles: " + tabs);
+        assertEquals(tabs.size(), 2, "Two windows should be open.");
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(2000);
+
+        // Verify URL
+        String currentUrl = driver.getCurrentUrl();
+        assertEquals(currentUrl, "https://www.lambdatest.com/integrations", "Unexpected URL!");
+
+        // Scroll to Codeless Automation section
+        WebElement codeless = driver.findElement(By.xpath("//a[normalize-space()='Codeless Automation']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", codeless);
+
+        // Click TestingWhiz integration link
+        WebElement link = driver.findElement(By.xpath("//a[normalize-space()='Integrate Testing Whiz with LambdaTest']"));
+        link.click();
+        Thread.sleep(3000);
+
+        // Verify title
+        assertEquals(driver.getTitle().trim(), "Running Automation Tests Using TestingWhiz LambdaTest | LambdaTest", "Title mismatch!");
+
+        // Close current tab and switch back
+        driver.close();
+        driver.switchTo().window(tabs.get(0));
+        System.out.println("Window count after close: " + driver.getWindowHandles().size());
+
+        // Navigate to blog
+        driver.get("https://www.lambdatest.com/blog");
+
+        // Click Community link
+        WebElement community = driver.findElement(By.xpath("//a[@href='https://community.lambdatest.com/'][normalize-space()='Community']"));
+     // Scroll it into view (center of the screen)
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", community);
+
+        // Wait briefly
+        Thread.sleep(1000);
+
+        // Click using JavaScript (bypasses overlay)
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", community);
+
+        // Verify URL
+        assertEquals(driver.getCurrentUrl(), "https://community.lambdatest.com/", "Community URL mismatch!");
     }
 
     @AfterMethod
-    public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
+    public void tearDown() {
+     if (driver != null) driver.quit();
     }
 }
