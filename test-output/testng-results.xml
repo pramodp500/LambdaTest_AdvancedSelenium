@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-03T10:07:52 IST" name="Cross Browser Suite" finished-at="2025-08-03T10:08:13 IST" duration-ms="21428">
+  <suite started-at="2025-08-03T11:14:19 IST" name="Cross Browser Suite" finished-at="2025-08-03T11:14:40 IST" duration-ms="21557">
     <groups>
     </groups>
-    <test started-at="2025-08-03T10:07:52 IST" name="Chrome_128_Win10" finished-at="2025-08-03T10:08:02 IST" duration-ms="10347">
-      <class name="Capabilities.TestScenario1">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@4659191b]" started-at="2025-08-03T10:07:52 IST" name="setup" finished-at="2025-08-03T10:08:02 IST" duration-ms="9886" status="PASS">
+    <test started-at="2025-08-03T11:14:19 IST" name="Chrome_128_Win10" finished-at="2025-08-03T11:14:30 IST" duration-ms="10997">
+      <class name="Capabilities.TestScenario3">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario3@4b8ee4de]" started-at="2025-08-03T11:14:19 IST" name="setup" finished-at="2025-08-03T11:14:29 IST" duration-ms="9702" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,19 +33,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testPageTitleWithExplicitWaitAndSoftAssert()[pri:0, instance:Capabilities.TestScenario1@4659191b]" started-at="2025-08-03T10:08:02 IST" name="testPageTitleWithExplicitWaitAndSoftAssert" finished-at="2025-08-03T10:08:02 IST" duration-ms="171" status="PASS">
+        <test-method signature="testJavaScriptAlert()[pri:0, instance:Capabilities.TestScenario3@4b8ee4de]" started-at="2025-08-03T11:14:29 IST" name="testJavaScriptAlert" finished-at="2025-08-03T11:14:30 IST" duration-ms="1030" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPageTitleWithExplicitWaitAndSoftAssert -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario1@4659191b]" started-at="2025-08-03T10:08:02 IST" name="teardown" finished-at="2025-08-03T10:08:02 IST" duration-ms="143" status="PASS">
+        </test-method> <!-- testJavaScriptAlert -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario3@4b8ee4de]" started-at="2025-08-03T11:14:30 IST" name="teardown" finished-at="2025-08-03T11:14:30 IST" duration-ms="88" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Capabilities.TestScenario1 -->
+      </class> <!-- Capabilities.TestScenario3 -->
     </test> <!-- Chrome_128_Win10 -->
-    <test started-at="2025-08-03T10:07:52 IST" name="Edge_127_macOS" finished-at="2025-08-03T10:08:03 IST" duration-ms="11242">
-      <class name="Capabilities.TestScenario1">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@17f62e33]" started-at="2025-08-03T10:07:52 IST" name="setup" finished-at="2025-08-03T10:08:03 IST" duration-ms="10881" status="PASS">
+    <test started-at="2025-08-03T11:14:19 IST" name="Edge_127_macOS" finished-at="2025-08-03T11:14:31 IST" duration-ms="11917">
+      <class name="Capabilities.TestScenario3">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario3@7674f035]" started-at="2025-08-03T11:14:19 IST" name="setup" finished-at="2025-08-03T11:14:30 IST" duration-ms="11110" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,19 +71,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testPageTitleWithExplicitWaitAndSoftAssert()[pri:0, instance:Capabilities.TestScenario1@17f62e33]" started-at="2025-08-03T10:08:03 IST" name="testPageTitleWithExplicitWaitAndSoftAssert" finished-at="2025-08-03T10:08:03 IST" duration-ms="94" status="PASS">
+        <test-method signature="testJavaScriptAlert()[pri:0, instance:Capabilities.TestScenario3@7674f035]" started-at="2025-08-03T11:14:30 IST" name="testJavaScriptAlert" finished-at="2025-08-03T11:14:31 IST" duration-ms="505" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPageTitleWithExplicitWaitAndSoftAssert -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario1@17f62e33]" started-at="2025-08-03T10:08:03 IST" name="teardown" finished-at="2025-08-03T10:08:03 IST" duration-ms="125" status="PASS">
+        </test-method> <!-- testJavaScriptAlert -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario3@7674f035]" started-at="2025-08-03T11:14:31 IST" name="teardown" finished-at="2025-08-03T11:14:31 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Capabilities.TestScenario1 -->
+      </class> <!-- Capabilities.TestScenario3 -->
     </test> <!-- Edge_127_macOS -->
-    <test started-at="2025-08-03T10:07:52 IST" name="Firefox_130_Win11" finished-at="2025-08-03T10:08:13 IST" duration-ms="21428">
-      <class name="Capabilities.TestScenario1">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@27406a17]" started-at="2025-08-03T10:07:52 IST" name="setup" finished-at="2025-08-03T10:08:11 IST" duration-ms="19190" status="PASS">
+    <test started-at="2025-08-03T11:14:19 IST" name="Firefox_130_Win11" finished-at="2025-08-03T11:14:40 IST" duration-ms="21557">
+      <class name="Capabilities.TestScenario3">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario3@173ed316]" started-at="2025-08-03T11:14:19 IST" name="setup" finished-at="2025-08-03T11:14:36 IST" duration-ms="16695" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -109,15 +109,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testPageTitleWithExplicitWaitAndSoftAssert()[pri:0, instance:Capabilities.TestScenario1@27406a17]" started-at="2025-08-03T10:08:11 IST" name="testPageTitleWithExplicitWaitAndSoftAssert" finished-at="2025-08-03T10:08:11 IST" duration-ms="322" status="PASS">
+        <test-method signature="testJavaScriptAlert()[pri:0, instance:Capabilities.TestScenario3@173ed316]" started-at="2025-08-03T11:14:36 IST" name="testJavaScriptAlert" finished-at="2025-08-03T11:14:38 IST" duration-ms="2347" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPageTitleWithExplicitWaitAndSoftAssert -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario1@27406a17]" started-at="2025-08-03T10:08:11 IST" name="teardown" finished-at="2025-08-03T10:08:13 IST" duration-ms="1775" status="PASS">
+        </test-method> <!-- testJavaScriptAlert -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario3@173ed316]" started-at="2025-08-03T11:14:38 IST" name="teardown" finished-at="2025-08-03T11:14:40 IST" duration-ms="2350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Capabilities.TestScenario1 -->
+      </class> <!-- Capabilities.TestScenario3 -->
     </test> <!-- Firefox_130_Win11 -->
   </suite> <!-- Cross Browser Suite -->
 </testng-results>

@@ -1,64 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="4" parallel="tests" name="Failed suite [Cross Browser Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="4" parallel="tests" name="IE_11_Win10(failed)">
-    <parameter name="browser" value="internet explorer"/>
-    <parameter name="version" value="11.0"/>
-    <parameter name="platform" value="Windows 10"/>
-    <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
-    <classes>
-      <class name="Capabilities.TestScenario1">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="testPageTitleWithExplicitWaitAndSoftAssert"/>
-        </methods>
-      </class> <!-- Capabilities.TestScenario1 -->
-    </classes>
-  </test> <!-- IE_11_Win10(failed) -->
-  <test thread-count="4" parallel="tests" name="Edge_127_macOS(failed)">
-    <parameter name="browser" value="MicrosoftEdge"/>
-    <parameter name="version" value="127.0"/>
-    <parameter name="platform" value="macOS Ventura"/>
-    <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
-    <classes>
-      <class name="Capabilities.TestScenario1">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="testPageTitleWithExplicitWaitAndSoftAssert"/>
-        </methods>
-      </class> <!-- Capabilities.TestScenario1 -->
-    </classes>
-  </test> <!-- Edge_127_macOS(failed) -->
-  <test thread-count="4" parallel="tests" name="Chrome_128_Win10(failed)">
+<suite thread-count="3" parallel="tests" name="Failed suite [Cross Browser Suite]">
+  <test thread-count="3" parallel="tests" name="Chrome_128_Win10(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="version" value="128.0"/>
     <parameter name="platform" value="Windows 10"/>
     <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
     <classes>
-      <class name="Capabilities.TestScenario1">
+      <class name="Capabilities.TestScenario3">
         <methods>
+          <include name="testJavaScriptAlert"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="testPageTitleWithExplicitWaitAndSoftAssert"/>
         </methods>
-      </class> <!-- Capabilities.TestScenario1 -->
+      </class> <!-- Capabilities.TestScenario3 -->
     </classes>
   </test> <!-- Chrome_128_Win10(failed) -->
-  <test thread-count="4" parallel="tests" name="Firefox_130_Win11(failed)">
+  <test thread-count="3" parallel="tests" name="Edge_127_macOS(failed)">
+    <parameter name="browser" value="MicrosoftEdge"/>
+    <parameter name="version" value="127.0"/>
+    <parameter name="platform" value="macOS Ventura"/>
+    <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
+    <classes>
+      <class name="Capabilities.TestScenario3">
+        <methods>
+          <include name="testJavaScriptAlert"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Capabilities.TestScenario3 -->
+    </classes>
+  </test> <!-- Edge_127_macOS(failed) -->
+  <test thread-count="3" parallel="tests" name="Firefox_130_Win11(failed)">
     <parameter name="browser" value="firefox"/>
     <parameter name="version" value="130.0"/>
     <parameter name="platform" value="Windows 11"/>
     <parameter name="url" value="https://www.lambdatest.com/selenium-playground/"/>
     <classes>
-      <class name="Capabilities.TestScenario1">
+      <class name="Capabilities.TestScenario3">
         <methods>
+          <include name="testJavaScriptAlert"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="testPageTitleWithExplicitWaitAndSoftAssert"/>
         </methods>
-      </class> <!-- Capabilities.TestScenario1 -->
+      </class> <!-- Capabilities.TestScenario3 -->
     </classes>
   </test> <!-- Firefox_130_Win11(failed) -->
 </suite> <!-- Failed suite [Cross Browser Suite] -->
