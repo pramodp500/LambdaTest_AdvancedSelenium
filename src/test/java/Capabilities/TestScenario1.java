@@ -1,73 +1,92 @@
 package Capabilities;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.safari.SafariOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 
 public class TestScenario1 {
-    private WebDriver driver;
 
-    @Parameters({"browser", "platform", "browserVersion"})
+    WebDriver driver;
+
+    @Parameters({ "browser", "version", "platform", "url" })
     @BeforeMethod
-    public void setUp(String browser, String platform, String browserVersion) throws Exception {
-        String username = "pramqa2025";
-        String accessKey = "LT_rcCzH9ULzk30W21Z9oVvBnfN0CZp5CSg9ETGb5IyTsDkF7i";
-        String gridURL = "https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
+    public void setup(String browser, String version, String platform, String url) throws MalformedURLException {
+        MutableCapabilities capabilities;
 
-        MutableCapabilities options;
-
-        if (browser.equalsIgnoreCase("Chrome")) {
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.setCapability("browserVersion", browserVersion);
-            options = chromeOptions;
-        } else if (browser.equalsIgnoreCase("Safari")) {
-            SafariOptions safariOptions = new SafariOptions();
-            safariOptions.setCapability("browserVersion", browserVersion);
-            options = safariOptions;
-        } else {
-            throw new IllegalArgumentException("Unsupported browser: " + browser);
+        switch (browser.toLowerCase()) {
+            case "chrome":
+                capabilities = new ChromeOptions();
+                break;
+            case "firefox":
+                capabilities = new FirefoxOptions();
+                break;
+            case "microsoftedge":
+            case "edge":
+                capabilities = new EdgeOptions();
+                break;
+            case "internet explorer":
+            case "ie":
+                capabilities = new InternetExplorerOptions();
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
 
-        // LambdaTest-specific capabilities
-        Map<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("platformName", platform);
-        ltOptions.put("build", "LambdaTest Parallel Run");
-        ltOptions.put("name", "Simple Form Demo Test - " + browser);
-        ltOptions.put("project", "Accessibility 101");
-        ltOptions.put("selenium_version", "4.0.0");
+        // LambdaTest W3C-compliant LT:Options
+        MutableCapabilities ltOptions = new MutableCapabilities();
+        ltOptions.setCapability("username", "pramqa2025");
+        ltOptions.setCapability("accessKey", "LT_rcCzH9ULzk30W21Z9oVvBnfN0CZp5CSg9ETGb5IyTsDkF7i");
+        ltOptions.setCapability("project", "Selenium Grid Demo");
+        ltOptions.setCapability("build", "Build 001");
+        ltOptions.setCapability("name", "Test Scenario 1");
+        ltOptions.setCapability("platformName", platform);
+        ltOptions.setCapability("browserVersion", version);
+        ltOptions.setCapability("selenium_version", "4.21.0");
 
-        options.setCapability("LT:Options", ltOptions);
+        capabilities.setCapability("LT:Options", ltOptions);
 
-        driver = new RemoteWebDriver(new URL(gridURL), options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        // LambdaTest Hub URL
+        String gridURL = "https://hub.lambdatest.com/wd/hub";
+        driver = new RemoteWebDriver(new URL(gridURL), capabilities);
+
+        driver.manage().window().maximize();
+        driver.get(url);
     }
 
     @Test
-    public void simpleFormDemoTest() {
-        driver.get("https://www.lambdatest.com/selenium-playground");
+    public void testPageTitleWithExplicitWaitAndSoftAssert() {
+        // Wait for the DOM to fully load
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
 
-        driver.findElement(By.linkText("Simple Form Demo")).click();
+        // Soft Assertion for title (expecting failure intentionally)
+        SoftAssert softAssert = new SoftAssert();
+        String actualTitle = driver.getTitle();
+        System.out.println("Actual Title: " + actualTitle);
 
-        String currentUrl = driver.getCurrentUrl();
-        assert currentUrl.contains("simple-form-demo") : "URL validation failed.";
+        softAssert.assertEquals(actualTitle, "Selenium Grid Online | Run Selenium Test On Cloud");
+        System.out.println("Continuing test after soft assertion...");
 
-        String message = "Welcome to LambdaTest";
-        driver.findElement(By.id("user-message")).sendKeys(message);
-        driver.findElement(By.id("showInput")).click();
-
-        String displayed = driver.findElement(By.id("message")).getText();
-        assert displayed.equals(message) : "Message mismatch. Expected: " + message + ", Found: " + displayed;
+        softAssert.assertAll(); // Triggers failure at the end if assertion failed
     }
 
     @AfterMethod
-    public void tearDown() {
-        if (driver != null) driver.quit();
+    public void teardown() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
