@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: mvn clean install
+    command: >
+      echo "Run tests with: mvn test -DsuiteXmlFile=testng.xml"
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - formulahendry.code-runner

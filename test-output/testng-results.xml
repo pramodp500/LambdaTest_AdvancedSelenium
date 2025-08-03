@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-03T11:14:19 IST" name="Cross Browser Suite" finished-at="2025-08-03T11:14:40 IST" duration-ms="21557">
+  <suite started-at="2025-08-03T12:33:20 IST" name="LambdaTestSuite" finished-at="2025-08-03T12:34:04 IST" duration-ms="43871">
     <groups>
     </groups>
-    <test started-at="2025-08-03T11:14:19 IST" name="Chrome_128_Win10" finished-at="2025-08-03T11:14:30 IST" duration-ms="10997">
-      <class name="Capabilities.TestScenario3">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario3@4b8ee4de]" started-at="2025-08-03T11:14:19 IST" name="setup" finished-at="2025-08-03T11:14:29 IST" duration-ms="9702" status="PASS">
+    <test started-at="2025-08-03T12:33:20 IST" name="Chrome128Win10" finished-at="2025-08-03T12:33:49 IST" duration-ms="29385">
+      <class name="Capabilities.TestScenario1">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@51e69659]" started-at="2025-08-03T12:33:20 IST" name="setUp" finished-at="2025-08-03T12:33:29 IST" duration-ms="9340" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
             <param index="1">
@@ -24,28 +24,23 @@
                 <![CDATA[Windows 10]]>
               </value>
             </param>
-            <param index="3">
-              <value>
-                <![CDATA[https://www.lambdatest.com/selenium-playground/]]>
-              </value>
-            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testJavaScriptAlert()[pri:0, instance:Capabilities.TestScenario3@4b8ee4de]" started-at="2025-08-03T11:14:29 IST" name="testJavaScriptAlert" finished-at="2025-08-03T11:14:30 IST" duration-ms="1030" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario()[pri:0, instance:Capabilities.TestScenario1@51e69659]" started-at="2025-08-03T12:33:29 IST" name="runScenario" finished-at="2025-08-03T12:33:49 IST" duration-ms="19721" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testJavaScriptAlert -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario3@4b8ee4de]" started-at="2025-08-03T11:14:30 IST" name="teardown" finished-at="2025-08-03T11:14:30 IST" duration-ms="88" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Capabilities.TestScenario1@51e69659]" started-at="2025-08-03T12:33:49 IST" name="tearDown" finished-at="2025-08-03T12:33:49 IST" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Capabilities.TestScenario3 -->
-    </test> <!-- Chrome_128_Win10 -->
-    <test started-at="2025-08-03T11:14:19 IST" name="Edge_127_macOS" finished-at="2025-08-03T11:14:31 IST" duration-ms="11917">
-      <class name="Capabilities.TestScenario3">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario3@7674f035]" started-at="2025-08-03T11:14:19 IST" name="setup" finished-at="2025-08-03T11:14:30 IST" duration-ms="11110" status="PASS">
+        </test-method> <!-- tearDown -->
+      </class> <!-- Capabilities.TestScenario1 -->
+    </test> <!-- Chrome128Win10 -->
+    <test started-at="2025-08-03T12:33:20 IST" name="Edge127Mac" finished-at="2025-08-03T12:34:04 IST" duration-ms="43871">
+      <class name="Capabilities.TestScenario1">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario1@6e9175d8]" started-at="2025-08-03T12:33:20 IST" name="setUp" finished-at="2025-08-03T12:33:32 IST" duration-ms="11801" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -62,62 +57,19 @@
                 <![CDATA[macOS Ventura]]>
               </value>
             </param>
-            <param index="3">
-              <value>
-                <![CDATA[https://www.lambdatest.com/selenium-playground/]]>
-              </value>
-            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testJavaScriptAlert()[pri:0, instance:Capabilities.TestScenario3@7674f035]" started-at="2025-08-03T11:14:30 IST" name="testJavaScriptAlert" finished-at="2025-08-03T11:14:31 IST" duration-ms="505" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario()[pri:0, instance:Capabilities.TestScenario1@6e9175d8]" started-at="2025-08-03T12:33:32 IST" name="runScenario" finished-at="2025-08-03T12:34:04 IST" duration-ms="31759" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testJavaScriptAlert -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario3@7674f035]" started-at="2025-08-03T11:14:31 IST" name="teardown" finished-at="2025-08-03T11:14:31 IST" duration-ms="136" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Capabilities.TestScenario1@6e9175d8]" started-at="2025-08-03T12:34:04 IST" name="tearDown" finished-at="2025-08-03T12:34:04 IST" duration-ms="161" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Capabilities.TestScenario3 -->
-    </test> <!-- Edge_127_macOS -->
-    <test started-at="2025-08-03T11:14:19 IST" name="Firefox_130_Win11" finished-at="2025-08-03T11:14:40 IST" duration-ms="21557">
-      <class name="Capabilities.TestScenario3">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Capabilities.TestScenario3@173ed316]" started-at="2025-08-03T11:14:19 IST" name="setup" finished-at="2025-08-03T11:14:36 IST" duration-ms="16695" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[130.0]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Windows 11]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[https://www.lambdatest.com/selenium-playground/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testJavaScriptAlert()[pri:0, instance:Capabilities.TestScenario3@173ed316]" started-at="2025-08-03T11:14:36 IST" name="testJavaScriptAlert" finished-at="2025-08-03T11:14:38 IST" duration-ms="2347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testJavaScriptAlert -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Capabilities.TestScenario3@173ed316]" started-at="2025-08-03T11:14:38 IST" name="teardown" finished-at="2025-08-03T11:14:40 IST" duration-ms="2350" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Capabilities.TestScenario3 -->
-    </test> <!-- Firefox_130_Win11 -->
-  </suite> <!-- Cross Browser Suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- Capabilities.TestScenario1 -->
+    </test> <!-- Edge127Mac -->
+  </suite> <!-- LambdaTestSuite -->
 </testng-results>
